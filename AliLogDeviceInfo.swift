@@ -7,9 +7,9 @@
 
 import CoreTelephony
 
-class AliLogDeviceInfo {
+public class AliLogDeviceInfo {
 
-    static public var resolutionRatio: String {
+    public static var resolutionRatio: String {
         let scale = UIScreen.main.scale
         let width = UIScreen.main.bounds.size.width * scale
         let height = UIScreen.main.bounds.size.height * scale
@@ -17,7 +17,7 @@ class AliLogDeviceInfo {
     }
     
     /// 运营商名字
-    static var carrierName: String {
+    public static var carrierName: String {
         let info = CTTelephonyNetworkInfo()
         if #available(iOS 12.0, *) {
             if let carriers = info.serviceSubscriberCellularProviders {
@@ -48,8 +48,8 @@ class AliLogDeviceInfo {
         }
     }
 
-    static let manager = NetworkReachabilityManager(host: "www.aliyun.com")
-    static public var networkStatus: String {
+    private static let manager = NetworkReachabilityManager(host: "www.aliyun.com")
+    public static var networkStatus: String {
         if manager?.isReachableOnEthernetOrWiFi ?? false {
             return "wifi"
         }
@@ -81,7 +81,7 @@ class AliLogDeviceInfo {
     }
     
     /// 网络制式
-    static var cellularType: String {
+    public static var cellularType: String {
         let info = CTTelephonyNetworkInfo()
         if #available(iOS 12.0, *) {
             if let carriers = info.serviceCurrentRadioAccessTechnology {
@@ -112,7 +112,7 @@ class AliLogDeviceInfo {
         }
     }
     
-    static var modeIdentifier: String {
+    public static var modeIdentifier: String {
         var systemInfo = utsname()
         uname(&systemInfo)
         
@@ -127,7 +127,7 @@ class AliLogDeviceInfo {
     }
     
     /// 设备型号
-    static var modeName: String {
+    public static var modeName: String {
         
         let identifier = modeIdentifier
         
@@ -220,7 +220,7 @@ class AliLogDeviceInfo {
     }
         
     /// 磁盘总大小
-    static var totalDiskSize: String {
+    public static var totalDiskSize: String {
         var fs = blankof(type: statfs.self)
         if statfs("/var",&fs) >= 0{
             return fileSizeToString(fileSize: Int64(UInt64(fs.f_bsize) * fs.f_blocks))
@@ -229,7 +229,7 @@ class AliLogDeviceInfo {
     }
         
     /// 磁盘可用大小
-    static var availableDiskSize: String {
+    public static var availableDiskSize: String {
         var fs = blankof(type: statfs.self)
         if statfs("/var",&fs) >= 0{
             return fileSizeToString(fileSize: Int64(UInt64(fs.f_bsize) * fs.f_bavail))
