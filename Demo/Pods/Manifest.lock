@@ -1,0 +1,23 @@
+PODS:
+  - AliLogHub (0.0.1):
+    - FMDB/standard (~> 2.7.0)
+  - FMDB/standard (2.7.5)
+
+DEPENDENCIES:
+  - AliLogHub (from `../AliLogHub.podspec`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - FMDB
+
+EXTERNAL SOURCES:
+  AliLogHub:
+    :path: "../AliLogHub.podspec"
+
+SPEC CHECKSUMS:
+  AliLogHub: ac1b5df718ceb2197272118794c65f53424c33fa
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+
+PODFILE CHECKSUM: e85cabce1aa46a215ee6b13bd876a86ec998123a
+
+COCOAPODS: 1.8.4

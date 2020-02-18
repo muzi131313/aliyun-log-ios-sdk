@@ -1,0 +1,6 @@
+framework module AliLogHub {
+  umbrella header "AliLogHub-umbrella.h"
+
+  export *
+  module * { export * }
+}

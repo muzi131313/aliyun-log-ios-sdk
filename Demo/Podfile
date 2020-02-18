@@ -1,0 +1,14 @@
+platform :ios, '10.0'
+inhibit_all_warnings!
+
+source 'https://github.com/CocoaPods/specs.git'
+
+target 'Demo' do
+  inhibit_all_warnings!
+  use_frameworks!
+  pod 'AliLogHub', :path => '../AliLogHub.podspec'
+end
+
+
+
+
