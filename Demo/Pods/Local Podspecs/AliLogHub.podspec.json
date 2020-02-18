@@ -1,6 +1,6 @@
 {
   "name": "AliLogHub",
-  "version": "0.0.1",
+  "version": "5.0.2",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -9,7 +9,7 @@
   "homepage": "https://github.com/ncnk/aliyun-log-ios-sdk",
   "source": {
     "git": "https://github.com/ncnk/aliyun-log-ios-sdk.git",
-    "tag": "0.0.1"
+    "tag": "5.0.2"
   },
   "source_files": "Classes/*.{swift,h}",
   "requires_arc": true,
