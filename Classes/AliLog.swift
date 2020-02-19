@@ -9,7 +9,14 @@ import UIKit
 
 open class AliLog: Log {
 
-    public func post(_ service: AliLogService, logStoreName: String, callBack: @escaping (URLResponse?, NSError?) -> ()) -> AliLog {
+    public private(set) var logStoreName: String
+    
+    public init(logStoreName: String) {
+        self.logStoreName = logStoreName
+        super.init()
+    }
+    
+    public func post(_ service: AliLogService, callBack: @escaping (URLResponse?, NSError?) -> ()) -> AliLog {
         let logGroup = LogGroup(topic: "", source: "")
         logGroup.PutLog(self)
         service.PostLog(logGroup, logStoreName: logStoreName, call: callBack)
