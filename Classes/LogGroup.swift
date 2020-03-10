@@ -52,7 +52,7 @@ class LogGroup: NSObject {
             let JsonPackage = String(data:try JSONSerialization.data(withJSONObject: package, options: .prettyPrinted), encoding: .utf8)!
             return JsonPackage
         } catch _ as NSError {
-            fatalError("Fail to serialize data.")
+//            fatalError("Fail to serialize data.")
             return ""
         }
     }
